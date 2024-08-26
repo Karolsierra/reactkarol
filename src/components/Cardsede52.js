@@ -1,4 +1,5 @@
 import React from "react";
+import '../c'
 
 function Cardsede52() {
   return (
@@ -7,30 +8,30 @@ function Cardsede52() {
         <h2 className="tittle1">Sede 52</h2>
         <div className="cuadro-info" id="info1">
           <ul className="text-info">
-            <ol>Deporte - Pruebas fisicas</ol>
-            <ol>Jorge Torres</ol>
-            <ol>15/09/2024 | 9:00am</ol>
+            <li>Deporte - Pruebas fisicas</li>
+            <li>Jorge Torres</li>
+            <li>15/09/2024 | 9:00am</li>
           </ul>
         </div>
         <div className="cuadro-info" id="info1">
           <ul className="text-info">
-            <ol>Deporte - Pruebas fisicas</ol>
-            <ol>Jorge Torres</ol>
-            <ol>15/09/2024 | 9:00am</ol>
+            <li>Deporte - Pruebas fisicas</li>
+            <li>Jorge Torres</li>
+            <li>15/09/2024 | 9:00am</li>
           </ul>
         </div>
         <div className="cuadro-info" id="info1">
           <ul className="text-info">
-            <ol>Deporte - Pruebas fisicas</ol>
-            <ol>Jorge Torres</ol>
-            <ol>15/09/2024 | 9:00am</ol>
+            <li>Deporte - Pruebas fisicas</li>
+            <li>Jorge Torres</li>
+            <li>15/09/2024 | 9:00am</li>
           </ul>
         </div>
         <div className="cuadro-info" id="info1">
           <ul className="text-info">
-            <ol>Deporte - Pruebas fisicas</ol>
-            <ol>Jorge Torres</ol>
-            <ol>15/09/2024 | 9:00am</ol>
+            <li>Deporte - Pruebas fisicas</li>
+            <li>Jorge Torres</li>
+            <li>15/09/2024 | 9:00am</li>
           </ul>
         </div>
       </div>

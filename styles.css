@@ -1,0 +1,536 @@
+/*CalendarioUsua*/
+/* Estilos para el contenido principal */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    margin-top: 9vh; /* Espacio para la barra de navegación */
+    flex-direction: column; /* Asegura que los elementos se alineen verticalmente */
+  }
+  
+  /* Contenedor que agrupa el formulario y el calendario */
+  .form-calendar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 1000px;
+    width: 100%;
+  }
+  
+  /* Estilos para el contenedor del formulario */
+  .form-container {
+    background-color: #fff;
+    padding: 1.5rem;
+    margin-top: 5%;
+    border: 1px solid #5cb85c;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  /* Estilo del título */
+  .form-container .titulo {
+    margin-top: 0;
+  }
+  
+  /* Estilo para las etiquetas del formulario */
+  .form-container .ingresar-datos {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Estilo para los campos del formulario */
+  .form-container .ingresar-datos2 {
+    width: calc(100% - 1rem);
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  /* Estilo para el botón del formulario */
+  .form-container .boton {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #5cb85c;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  .form-container .boton:hover {
+    background-color: #4cae4c;
+  }
+  
+  /* Estilos para el contenedor del calendario */
+  .calendar-container {
+    background-color: #fff;
+    padding: 1.5rem;
+    border: 1px solid #5cb85c;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    margin-top: 2rem;
+  }
+  
+  /* Estilos para la cuadrícula del calendario */
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px; /* Espacio entre los días */
+  }
+  
+  /* Estilos para los días del calendario */
+  .calendar-day {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Estilo para los días con eventos */
+  .calendar-day.event {
+    background-color: #e0ffe0; /* Color de fondo para los días con eventos */
+    border-color: #5cb85c; /* Borde más oscuro para días con eventos */
+    color: #333;
+  }
+  
+  .calendar-day:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .calendar-day.event:hover {
+    background-color: #d4edda; /* Color de fondo más claro para días con eventos */
+  }
+  
+
+/*NotificacionesUsua*/
+/* Contenedor de búsqueda y filtro */
+.title-search-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 90%;
+    box-sizing: border-box;
+}
+
+/* Título de la sección */
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+/* Contenedor de búsqueda y filtro */
+.search-filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espacio entre los elementos */
+    margin-bottom: 20px;
+}
+
+/* Estilo de la barra de búsqueda */
+.search-bar {
+    padding: 10px;
+    font-size: 1em;
+    width: 50%;
+    border: 2px solid #5cb85c;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+}
+
+/* Estilo del botón de búsqueda */
+.search-button {
+    padding: 7.5px;
+    background-color: #5cb85c;
+    border: 2px solid #5cb85c;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo de las imágenes en el botón de búsqueda */
+.search-button img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Estilo del botón de filtro */
+.filter-button {
+    padding: 7.5px;
+    background-color: #5cb85c;
+    border: 2px solid #5cb85c;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo de las imágenes en el botón de filtro */
+.filter-button img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Contenedor principal de notificaciones */
+.notifications-container {
+    background: #f9f9f9;
+    padding: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+    height: 70vh;
+    overflow-y: auto;
+    border-radius: 8px;
+    border: 1px solid #5cb85c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+}
+
+/* Tarjeta de notificación */
+.notification-card {
+    background: #fff;
+    border: 1px solid #5cb85c;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el ratón sobre la tarjeta */
+.notification-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo del encabezado en la tarjeta de notificación */
+.notification-card h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #34495e;
+}
+
+/* Estilo del texto en la tarjeta de notificación */
+.notification-card p {
+    font-size: 14px;
+    color: #292828;
+    margin: 10px 0;
+}
+
+/* Estilo para la sección de programación dentro de la tarjeta */
+.programacion p {
+    font-size: 12px;
+    color: #575656;
+    margin: 5px 0;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .title-search-container {
+        padding: 15px;
+    }
+
+    .search-bar {
+        width: 70%;
+    }
+
+    .notifications-container {
+        max-width: 100%;
+    }
+
+    .notification-card {
+        margin-bottom: 15px;
+    }
+
+    .section-title {
+        font-size: 2em;
+    }
+}
+
+/* Media queries para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+    .title-search-container {
+        padding: 10px;
+    }
+
+    .search-bar {
+        width: 80%;
+    }
+
+    .search-button,
+    .filter-button {
+        padding: 5px;
+    }
+
+    .notification-card {
+        padding: 10px;
+    }
+
+    .section-title {
+        font-size: 1.8em;
+    }
+}
+
+/* Media queries para pantallas ultra grandes (monitores grandes) */
+@media (min-width: 1440px) {
+    .title-search-container {
+        padding: 30px;
+        max-width: 80%;
+    }
+
+    .search-bar {
+        width: 40%;
+    }
+
+    .notifications-container {
+        max-width: 1200px;
+    }
+
+    .notification-card {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 3em;
+    }
+}
+
+
+/*ProfileUsua*/
+/* Estilo general para el contenedor principal */
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px;
+    height: auto; /* Ajusta automáticamente la altura */
+    width: 90vw; /* Ajusta el ancho */
+    max-width: 1000px; /* Ancho máximo del contenedor */
+    border: 1px solid #5cb85c;
+    border-radius: 8px;
+    background-color: #fff;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+  }
+  
+  /* Estilo para el contenedor del título */
+  .title-container {
+    text-align: center;
+  }
+  
+  /* Estilo del título */
+  .section-title {
+    font-size: 2.5em;
+    margin-top: 15vh; /* Ajusta el espaciado superior */
+    color: #2c3e50;
+  }
+  
+  /* Estilo del contenedor del perfil */
+  .profile-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+    gap: 35px; /* Espacio entre columnas */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    max-width: 970px; /* Ancho máximo del contenedor del formulario */
+  }
+  
+  /* Estilo del formulario */
+  #formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+    gap: 35px; /* Espacio entre columnas */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+  }
+  
+  /* Estilo de los grupos de formulario */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px; /* Espacio entre campos */
+  }
+  
+  /* Estilo de las etiquetas */
+  .form-group .datos {
+    display: flex;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px; /* Espacio debajo de la etiqueta */
+  }
+  
+  /* Estilo de los campos de entrada */
+  .form-group .datos2,
+  .form-group .opciones {
+    padding: 12px; /* Padding para mejor usabilidad */
+    font-size: 16px;
+    border: 1px solid #5cb85c;
+    border-radius: 8px;
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Estilo para el enfoque en campos de entrada */
+  .form-group .datos2:focus,
+  .form-group .opciones:focus {
+    border-color: #5cb85c;
+    outline: none;
+  }
+  
+  /* Media queries para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .profile-container {
+        grid-template-columns: 1fr; /* Cambia a una columna en pantallas pequeñas */
+    }
+  
+    .section-title {
+        font-size: 2em; /* Reduce el tamaño del título */
+        margin-top: 10vh; /* Ajusta el margen superior */
+    }
+  }
+  
+  /* Media queries para pantallas muy pequeñas (móviles) */
+  @media (max-width: 480px) {
+    main {
+        padding: 15px; /* Reduce el padding en pantallas pequeñas */
+        width: 95vw; /* Aumenta el ancho para aprovechar más el espacio */
+    }
+  
+    #formulario {
+        gap: 20px; /* Reduce el espacio entre los campos */
+    }
+  
+    .form-group .datos2,
+    .form-group .opciones {
+        padding: 10px; /* Reduce el padding de los campos de entrada */
+        font-size: 14px; /* Reduce el tamaño de la fuente */
+    }
+  }
+  
+  /* Media queries para pantallas muy grandes (monitores ultra anchos) */
+  @media (min-width: 1440px) {
+    main {
+        width: 70vw; /* Reduce el ancho para evitar que el contenido se extienda demasiado */
+        max-width: 1800px; /* Incrementa el máximo ancho del contenedor principal */
+        padding: 50px; /* Incrementa el padding para dar más espacio alrededor del contenido */
+    }
+  
+    .profile-container {
+        grid-template-columns: repeat(4, 1fr); /* Añade una cuarta columna para aprovechar mejor el espacio */
+        gap: 50px; /* Incrementa el espacio entre los campos */
+    }
+  
+    .section-title {
+        font-size: 3.5em; /* Incrementa el tamaño del título */
+        margin-top: 8vh; /* Ajusta el margen superior para centrar mejor el contenido */
+    }
+  
+    .form-group .datos2,
+    .form-group .opciones {
+        padding: 18px; /* Mayor padding para campos de entrada */
+        font-size: 20px; /* Incrementa el tamaño de la fuente */
+    }
+  }
+  
+  /* Media queries para pantallas ultra grandes (televisores y pantallas de más de 1920px) */
+  @media (min-width: 1920px) {
+    main {
+        width: 60vw; /* Reduce aún más el ancho para evitar que el contenido se extienda demasiado */
+        max-width: 2000px; /* Incrementa el máximo ancho del contenedor principal */
+        padding: 60px; /* Incrementa el padding para dar más espacio alrededor del contenido */
+    }
+  
+    .profile-container {
+        grid-template-columns: repeat(4, 1fr); /* Mantiene las cuatro columnas pero con más espacio */
+        gap: 60px; /* Incrementa el espacio entre los campos */
+    }
+  
+    .section-title {
+        font-size: 4em; /* Incrementa el tamaño del título */
+        margin-top: 6vh; /* Ajusta el margen superior */
+    }
+  
+    .form-group .datos2,
+    .form-group .opciones {
+        padding: 20px; /* Mayor padding para campos de entrada */
+        font-size: 22px; /* Incrementa el tamaño de la fuente */
+    }
+  }  
+
+/*ProgramacionUsua*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33% - 20px);
+  }
+  
+  .card h2 {
+    margin-top: 0;
+  }
+  
+  .cuadro-info {
+    margin-top: 20px;
+  }
+  
+  .text-info {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .text-info li {
+    margin-bottom: 10px;
+  }
+  

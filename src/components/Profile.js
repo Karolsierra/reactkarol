@@ -1,17 +1,18 @@
-import React from "react";
+// src/components/Profile.js
+import React from 'react'; 
 
-function Profile() {
+const Profile = () => {
   return (
     <div>
       <div className="title-container">
-        <h2 className="section-title">Informacion del Perfil</h2>
+        <h2 className="section-title">Información del Perfil</h2>
       </div>
       <main>
         <div className="profile-container">
           <form id="formulario" action="#" method="post">
             <div className="form-group">
-              <label htmlFor="nombre">Nombre:</label>
-              <input
+              <label className="datos" htmlFor="nombre">Nombre:</label>
+              <input className="datos2"
                 type="text"
                 id="nombre"
                 name="nombre"
@@ -20,8 +21,8 @@ function Profile() {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="apellido">Apellido:</label>
-              <input
+              <label className="datos" htmlFor="apellido">Apellido:</label>
+              <input className="datos2"
                 type="text"
                 id="apellido"
                 name="apellido"
@@ -30,8 +31,8 @@ function Profile() {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="correo">Correo institucional:</label>
-              <input
+              <label className="datos" htmlFor="correo">Correo institucional:</label>
+              <input className="datos2"
                 type="email"
                 id="correo"
                 name="correo"
@@ -40,18 +41,18 @@ function Profile() {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="clave">Clave:</label>
-              <input
+              <label className="datos" htmlFor="clave">Clave:</label>
+              <input className="datos2"
                 type="password"
                 id="clave"
                 name="clave"
-                defaultValue={123456}
+                defaultValue="123456"
                 readOnly
               />
             </div>
             <div className="form-group">
-              <label htmlFor="genero">Género:</label>
-              <select id="genero" name="genero" disabled>
+              <label className="datos" htmlFor="genero">Género:</label>
+              <select className="opciones" id="genero" name="genero" disabled>
                 <option value>Seleccione una opción</option>
                 <option value="masculino" selected>
                   Masculino
@@ -61,8 +62,8 @@ function Profile() {
               </select>
             </div>
             <div className="form-group">
-              <label htmlFor="rol">Rol:</label>
-              <select id="rol" name="rol" disabled>
+              <label className="datos" htmlFor="rol">Rol:</label>
+              <select className="opciones" id="rol" name="rol" disabled>
                 <option value>Seleccione una opción</option>
                 <option value="instructor">Instructor</option>
                 <option value="capacitador">Capacitador</option>
