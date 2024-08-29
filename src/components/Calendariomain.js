@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './styles/calendario.css'; // Asegúrate de que la ruta sea correcta
+
 
 function Calendariomain() {
   const [calendarVisible, setCalendarVisible] = useState(false);

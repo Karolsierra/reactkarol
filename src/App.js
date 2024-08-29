@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import Calendariomain from "./components/Calendariomain";
+import CalendarioPrograma from "./pages/CalendarioPrograma";
 
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <>
       <Routes>
-        <Route path="/Calendario" element={<Calendariomain/>} />
+        <Route path="/Calendario" element={<CalendarioPrograma/>} />
       </Routes>
       </>
     </div>

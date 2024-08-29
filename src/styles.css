@@ -534,3 +534,211 @@ body {
     margin-bottom: 10px;
   }
   
+
+  /*Nav Admin*/
+  body {
+    background-color: #5cb85c21;
+    margin: 0;
+    padding: 0;
+    font-family: "Work Sans Regular", sans-serif;
+  }
+  
+  /* Estilo del encabezado */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f4;
+    top: 0;
+    height: 9vh;
+    width: 100%;
+    border-bottom: 2px solid #5cb85c;
+    position: fixed;
+    z-index: 1000;
+    padding: 0 1%; /* Añade padding para asegurar que el contenido no esté pegado a los bordes */
+    box-sizing: border-box;
+  }
+  
+  /* Estilo del logo */
+  .logo {
+    padding: 5px;
+    width: 15%;
+    max-height: 15vh;
+  }
+  
+  /* Estilo de la barra de navegación */
+  nav {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Elimina el margen derecho para centrar el nav */
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 75px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  /* Estilo de los enlaces de la barra de navegación */
+  nav ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 10px;
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 50px;
+    position: relative; /* Necesario para la línea inferior */
+  }
+  
+  /* Estilo de los iconos */
+  nav ul li a .icono {
+    width: 3vh;
+    height: 3vh;
+    padding: 0px 5px;
+    margin: 0;
+  }
+  
+  /* Efecto de hover en los enlaces */
+  nav ul li a:hover {
+    background-color: #5cb85cc2;
+  }
+  
+  /* Estilo de los enlaces de cerrar sesión */
+  .cerrarSesion {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cerrarSesion a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    padding: 4px 10px;
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 50px;
+    position: relative; /* Necesario para la línea inferior */
+  }
+  
+  .cerrarSesion a:hover {
+    background-color: #5cb85cc2;
+  }
+  
+  /* Estilo de la línea inferior para el botón de cerrar sesión activo */
+  .cerrarSesion a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 10%;
+    right: 10%;
+    height: 3px;
+    background-color: #5cb85c;
+    border-radius: 50px;
+  }
+  
+  /* Estilo de los iconos en cerrar sesión */
+  .cerrarSesion a .icono {
+    width: 3.4vh;
+    height: 3.4vh;
+  }
+  
+  .cerrarSesion a .icono:hover {
+    filter: brightness(0.5);
+  }
+  
+  /* Media queries para pantallas más pequeñas */
+  @media (max-width: 1024px) {
+    .logo {
+      width: 12%; /* Ajusta el tamaño del logo para pantallas más pequeñas */
+    }
+  
+    nav ul li {
+      margin: 0 10px; /* Reduce el margen entre los elementos de la barra de navegación */
+    }
+  
+    nav ul li a {
+      padding: 4px 8px; /* Reduce el padding de los enlaces */
+    }
+  }
+  
+  /* Media queries para pantallas muy pequeñas (móviles) */
+  @media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      height: auto; /* Permite que el header se ajuste al contenido */
+      padding: 10px 5%; /* Añade padding para el contenido del header */
+    }
+  
+    .logo {
+      width: 30%; /* Aumenta el tamaño del logo en pantallas móviles */
+      max-height: none; /* Permite que el logo se ajuste libremente en pantallas pequeñas */
+    }
+  
+    nav {
+      margin: 0; /* Elimina el margen para que el contenido del nav esté centrado */
+    }
+  
+    nav ul {
+      flex-direction: column; /* Coloca los elementos de navegación en columna */
+    }
+  
+    nav ul li {
+      margin: 10px 0; /* Ajusta el margen entre los elementos en columna */
+    }
+  
+    nav ul li a {
+      padding: 6px 12px; /* Aumenta el padding de los enlaces para pantallas móviles */
+    }
+  
+    .cerrarSesion a {
+      padding: 6px 14px; /* Aumenta el padding del botón de cerrar sesión */
+    }
+  }
+  
+  /* Media queries para pantallas más grandes */
+  @media (min-width: 1440px) {
+    header {
+      height: 10vh; /* Ajusta la altura del encabezado para pantallas grandes */
+      padding: 0 4%; /* Aumenta el padding para centrar mejor el contenido */
+    }
+  
+    .logo {
+      width: 10%; /* Reduce el tamaño del logo para pantallas muy grandes */
+    }
+  
+    nav {
+      flex-grow: 0; /* Desactiva el crecimiento del flex para mantener el nav centrado */
+      width: auto; /* Ajusta el ancho del nav para que no se expanda demasiado */
+    }
+  
+    nav ul {
+      margin: 0;
+    }
+  
+    nav ul li {
+      margin: 0 20px; /* Aumenta el margen entre los elementos de la barra de navegación */
+    }
+  
+    nav ul li a {
+      padding: 6px 14px; /* Aumenta el padding de los enlaces para mejor visibilidad */
+      font-size: 16px; /* Aumenta el tamaño de la fuente de los enlaces */
+    }
+  
+    .cerrarSesion a {
+      padding: 6px 16px; /* Aumenta el padding del botón de cerrar sesión */
+      font-size: 16px; /* Aumenta el tamaño de la fuente del botón de cerrar sesión */
+    }
+  }

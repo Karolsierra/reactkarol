@@ -1,6 +1,6 @@
 import React from "react";
-import Navbarinscap from "../components/layout/Navbarinscap";
-import Calendariomain from "../components/calendariomain";
+import Navbarinscap from "../";
+import Calendariomain from "../components/Calendariomain";
 
 function CalendarioPrograma () {
   return (
